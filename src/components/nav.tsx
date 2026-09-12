@@ -3,7 +3,7 @@ import { FiMenu } from "react-icons/fi";
 
 export default function Nav() {
   return (
-    <nav className="container mx-auto px-3 py-3 sticky top-0 z-50">
+    <nav className="container mx-auto bg-white px-3 py-3 sticky top-0 z-50">
 
       <div className="flex items-center justify-between">
 
