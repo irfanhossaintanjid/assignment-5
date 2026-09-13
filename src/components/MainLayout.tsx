@@ -40,11 +40,11 @@ const handleRemoveAll = () => {
   return (
     <section className="container mx-auto">
 
-      <div className="pb-10">
+      <div className="pb-10 text-center md:text-left">
         <h1 className="text-2xl md:text-4xl font-bold">
           Explore the{" "}
           <span className="bg-gradient-to-r from-orange-500 via-pink-600 to-violet-700 bg-clip-text text-2xl font-bold leading-tight text-transparent md:text-4xl">
-Technologies</span>
+          Technologies</span>
         </h1>
 
         <p className="font-medium text-gray-600 sm:text-lg">

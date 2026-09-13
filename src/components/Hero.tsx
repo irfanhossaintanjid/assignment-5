@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="container mx-auto flex min-h-100 flex-col items-center justify-between gap-8 px-4 py-12 md:flex-row md:px-6 ">
       
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 text-center md:text-left">
         <h1 className="text-4xl font-bold leading-tight md:text-6xl ">
           Build Your Ideal
         </h1>
