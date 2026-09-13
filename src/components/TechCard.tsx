@@ -26,7 +26,8 @@ const handleAdd = () => {
  
 
   return (
-    <div className="rounded-3xl border border-gray-200  p-5 shadow-sm transition-all  hover:-translate-y-1 hover:shadow-2xl">
+    
+    <div className=" rounded-3xl border border-gray-200  p-5 shadow-sm transition-all  hover:-translate-y-1 hover:shadow-2xl">
 
       
       <div className="flex items-start justify-between">
@@ -71,9 +72,10 @@ const handleAdd = () => {
       
       <button onClick={handleAdd}
   disabled={isAdded}
-   className="mt-3 w-full rounded-xl bg-gray-950 px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-gray-700 hover:shadow-md active:scale-95">
+   className="cursor-pointer mt-3 w-full rounded-xl bg-gray-950 px-4 py-2 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-gray-700 hover:shadow-md active:scale-95">
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
+    
   );
 }

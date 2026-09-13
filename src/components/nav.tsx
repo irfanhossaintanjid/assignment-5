@@ -19,11 +19,11 @@ export default function Nav() {
 
 
         <ul className="hidden md:flex items-center justify-center gap-5 flex-1">
-          <li className="text-[#db2777]">Home</li>
-          <li>Technologies</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li className="text-[#db2777]"> <a href="#">Home</a></li>
+          <li><a href="#">Technologies</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
 
         <div className="flex items-center gap-2">

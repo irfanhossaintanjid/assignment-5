@@ -21,11 +21,11 @@ export function Hero() {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <button className="rounded-2xl bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 px-6 py-3 font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg">
+          <button className="rounded-2xl cursor-pointer bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 px-6 py-3 font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg">
             Explore Technologies
           </button>
 
-          <button className="rounded-2xl border border-[#db2777] bg-white px-6 py-3 font-semibold  transition hover:bg-gray-200">
+          <button className="rounded-2xl cursor-pointer border border-[#db2777] bg-white px-6 py-3 font-semibold  transition hover:bg-gray-200">
             Learn More
           </button>
         </div>

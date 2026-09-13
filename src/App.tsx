@@ -1,4 +1,5 @@
 
+import Footer from "./components/Footer";
 import { Hero } from "./components/Hero"
 import MainLayout from "./components/MainLayout"
 import Nav from "./components/nav"
@@ -10,7 +11,7 @@ function App() {
        <Nav></Nav>
        <Hero />
        <MainLayout />
-       
+       <Footer></Footer>
       <ToastContainer position="top-right" autoClose={2000} />
 
     </>

@@ -8,8 +8,7 @@ type SidebarProps = {
 
 export default function Sidebar({ selectedStack,  handleRemoveFromStack,  handleRemoveAll }: SidebarProps) {
   return (
-    <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm h-fit ">
-      
+      <div className="sticky top-24 h-fit rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
        
       <div className=" flex-col">
         <h2 className="text-xl font-bold text-black">
@@ -59,7 +58,7 @@ export default function Sidebar({ selectedStack,  handleRemoveFromStack,  handle
       </p>
     </div>
 
-    <button onClick={() => handleRemoveFromStack(technology.id)} className="text-lg font-bold text-gray-400">
+    <button onClick={() => handleRemoveFromStack(technology.id)} className="text-lg cursor-pointer font-bold text-gray-400">
       ×
     </button>
   </div>
@@ -69,7 +68,7 @@ export default function Sidebar({ selectedStack,  handleRemoveFromStack,  handle
       <button
         onClick={handleRemoveAll}
         disabled={selectedStack.length === 0}
-        className={`mt-5 w-full rounded-xl border px-4 py-3 text-sm font-semibold ${
+        className={`mt-5 w-full rounded-xl cursor-pointer border px-4 py-3 text-sm font-semibold ${
           selectedStack.length > 0
             ? "border-orange-400  text-orange-600 hover:bg-red-50"
             : "border-gray-200 text-gray-400"

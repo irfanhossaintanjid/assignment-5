@@ -29,7 +29,7 @@ export default function TechList({
         const data: Technology[] = await res.json();
 
         setTechnologies(data);
-      } catch (error) {
+      } catch  {
         setError("Failed to load technologies.");
       } finally {
         setLoading(false);
