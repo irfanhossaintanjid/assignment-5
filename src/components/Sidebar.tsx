@@ -2,13 +2,15 @@ import type { Technology } from "../types";
 
 type SidebarProps = {
   selectedStack: Technology[];
+  handleRemoveFromStack: (id: string) => void;
+  handleRemoveAll: () => void;
 };
 
-export default function Sidebar({ selectedStack }: SidebarProps) {
+export default function Sidebar({ selectedStack,  handleRemoveFromStack,  handleRemoveAll }: SidebarProps) {
   return (
-    <div className="rounded-4xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm h-fit ">
       
-      
+       
       <div className=" flex-col">
         <h2 className="text-xl font-bold text-black">
           Your Stack
@@ -26,7 +28,7 @@ export default function Sidebar({ selectedStack }: SidebarProps) {
       </div>
 
       {selectedStack.length === 0 && (
-      <div className="mt-10 rounded-2xl border border-dashed border-gray-500 px-5 py-10 text-center">
+      <div className="mt-2 rounded-2xl border border-dashed border-gray-600 px-5 py-10 text-center">
         <p className="font-medium text-gray-600">
           Your stack is empty
         </p>
@@ -57,7 +59,7 @@ export default function Sidebar({ selectedStack }: SidebarProps) {
       </p>
     </div>
 
-    <button className="text-lg font-bold text-gray-400">
+    <button onClick={() => handleRemoveFromStack(technology.id)} className="text-lg font-bold text-gray-400">
       ×
     </button>
   </div>
@@ -65,8 +67,13 @@ export default function Sidebar({ selectedStack }: SidebarProps) {
 
     
       <button
-        disabled
-        className="mt-5 w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-400"
+        onClick={handleRemoveAll}
+        disabled={selectedStack.length === 0}
+        className={`mt-5 w-full rounded-xl border px-4 py-3 text-sm font-semibold ${
+          selectedStack.length > 0
+            ? "border-orange-400  text-orange-600 hover:bg-red-50"
+            : "border-gray-200 text-gray-400"
+        }`}
       >
         Remove All
       </button>

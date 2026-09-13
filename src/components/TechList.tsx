@@ -47,7 +47,6 @@ export default function TechList({
         <p>{error}</p>
       ) : (
         <>
-          <h2>Technologies</h2>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {technologies.map((technology) => (
