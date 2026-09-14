@@ -1,57 +1,43 @@
 # Dev Stack Builder
 
-Dev Stack Builder is a responsive React and TypeScript website for exploring development technologies and assembling a personal project stack. Technology records are loaded from a local JSON file, so the catalogue stays easy to update.
+Dev Stack Builder is a responsive React and TypeScript website built for exploring development technologies and assembling a personal project stack. Technology records are loaded from a local JSON file, making the catalog easy to update.
+
+## Technologies Used
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* React Toastify
+* JSON
 
 ## Features
 
-- Browse technology cards with icons, badges, categories, difficulty, descriptions, and ratings.
-- Filter technologies by category and add unique choices to the Your Stack sidebar.
-- Remove individual choices or the complete stack with React Toastify feedback.
+* Browse various development technologies with icons, categories, and descriptions.
+* Select preferred technologies to build a customized project stack.
+* Dynamically add or remove selected technologies from the sidebar.
 
-## Built With
-
-React, TypeScript, Vite, Tailwind CSS, DaisyUI, React Icons, React Toastify, and JSON.
-
-## Run Locally
-
-```bash
-npm install
-npm run dev
-```
+---
 
 ## React Questions
 
 ### 1. What is JSX, and why is it used in React?
-
-JSX is HTML-like syntax written inside JavaScript or TypeScript. React uses it to describe component UI clearly.
+**Ans:** JSX is an HTML-like syntax written inside JavaScript or TypeScript. React uses it to clearly describe how the UI of a component should look.
 
 ### 2. What is the difference between props and state?
+**Ans:** Props are read-only data passed from a parent component to a child component. State is mutable data managed within the component, and changing it triggers a re-render of the UI.
 
-Props are read-only values passed from a parent. State is changeable data owned by a component that can trigger a re-render.
+### 3. What does the useState hook do, and where did you use it in this project?
+**Ans:** `useState` is a React Hook that holds stateful data in functional components. In this project, it is used to manage the technology list, selected stack, filters, and loading states.
 
-### 3. What does `useState` do, and where was it used?
+### 4. What does the useEffect hook do, and why did you need it to load the JSON data?
+**Ans:** `useEffect` handles side effects after a component renders. It is used here to fetch the technology list from the `public/data.json` file when the page loads.
 
-`useState` stores changing values in a function component. This project uses it for technologies, the selected stack, filters, loading, and errors.
-
-### 4. What does `useEffect` do, and why was it needed?
-
-`useEffect` runs side effects after rendering. It is used here to fetch `public/data.json` when the technology list loads.
-
-### 5. Why does every `.map()` item need a unique `key`?
-
-A unique key lets React identify list items and update only the items that changed.
+### 5. Why does every item in a .map() list need a unique key prop?
+**Ans:** A unique key helps React identify each list item individually. When items change, are added, or removed, React updates only the specific item instead of re-rendering the whole list.
 
 ### 6. What is conditional rendering?
+**Ans:** Conditional rendering means displaying different UI components based on specific conditions. In this project, an empty stack message is shown when no technology is selected, and the stack items are displayed when selected.
 
-Conditional rendering displays different UI for different conditions. This project shows an empty-stack message when no technology is selected and stack rows otherwise.
-
-### 7. How do parent and child components share data and actions?
-
-A parent sends data or functions to a child through props. The child calls a function prop to send an event back to the parent. Components in this project are composed through `App` and `MainLayout`, while `TechList` manages the stack interaction.
-
-## Validation
-
-```bash
-npm run build
-npm run lint
-```
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+**Ans:** A parent component passes data or functions to a child component using props. When an action occurs (like a button click), the child component calls the function prop to communicate back to the parent.
